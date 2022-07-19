@@ -23,10 +23,10 @@ function loadLayer(){
     let cqlf = `CQL_FILTER=name_of_th='${place_name}'`
 
     if(place_name != null){
-        url = 'http://ec2-18-223-15-82.us-east-2.compute.amazonaws.com:8080/geoserver/AudioTour/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=AudioTour%3Atourist_locations&maxFeatures=50&outputFormat=application%2Fjson&' + cqlf;
+        url = 'http://localhost:8080/geoserver/AudioTour/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=AudioTour%3Atourist_locations&maxFeatures=50&outputFormat=application%2Fjson&' + cqlf;
     }
     if (place_name == ''){
-        url = 'http://ec2-18-223-15-82.us-east-2.compute.amazonaws.com:8080/geoserver/AudioTour/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=AudioTour%3Atourist_locations&maxFeatures=50&outputFormat=application%2Fjson';
+        url = 'http://localhost:8080/geoserver/AudioTour/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=AudioTour%3Atourist_locations&maxFeatures=50&outputFormat=application%2Fjson';
     }
     
     $.ajax({
